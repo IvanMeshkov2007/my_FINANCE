@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+    <LinearLayout
+        android:id="@+id/Waste_liner"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+        <TextView
+            android:id="@+id/Waste_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="24.25.2007"
+
+            />
+        <TextView
+            android:id="@+id/Waste_item_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/Waste_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/Waste_liner"
+        app:layout_constraintRight_toLeftOf="@id/Waste_delete_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:text="на проезд\n26а\naaaaaa"/>
+    <ImageButton
+        android:id="@+id/Waste_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textSize="15sp"
+        android:src="@drawable/baseline_delete_48"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/transparent"
+        android:tint="@color/red"
+
+        tools:ignore="UseAppTint" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

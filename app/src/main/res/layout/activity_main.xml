@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/My_fin_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Мои Финансы"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/This_moneh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/My_fin_TV"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/This_moth_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Траты за текущий месяц"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/s_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/This_moth_info"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="С "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/This_month_start_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/This_month_stop_tv"
+            app:layout_constraintTop_toBottomOf="@id/This_moth_info"
+            android:textSize="30sp"
+            android:text="24.05.2007"
+            />
+        <TextView
+            android:id="@+id/Po_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/This_month_start_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="По "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/This_month_stop_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/This_month_start_tv"
+            app:layout_constraintLeft_toRightOf="@id/Po_tv"
+            android:textSize="30sp"
+            android:text="24.05.2008"
+            />
+        <TextView
+            android:id="@+id/This_month_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/This_month_sun_numb"
+            app:layout_constraintBottom_toBottomOf="@id/This_month_sun_numb"
+            android:text="Cумма: "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/This_month_sun_numb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/This_month_sum"
+            app:layout_constraintTop_toBottomOf="@id/This_month_stop_tv"
+            android:textSize="40sp"
+            android:text="5000"
+            />
+        <Button
+            android:id="@+id/This_month_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/This_month_start_tv"
+            app:layout_constraintLeft_toRightOf="@id/This_month_start_tv"
+            app:layout_constraintBottom_toBottomOf="@id/This_month_stop_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="20sp"
+            android:text="Узнать\n больше" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prev_month_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/This_moneh_layout"
+        android:padding="10dp"
+
+        >
+        <TextView
+            android:id="@+id/prev_moth_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Траты за прошлый месяц"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/prev_s_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/prev_moth_info"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="С "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/prev_month_start_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/prev_month_stop_tv"
+            app:layout_constraintTop_toBottomOf="@id/prev_moth_info"
+            android:textSize="30sp"
+            android:text="24.05.2007"
+            />
+        <TextView
+            android:id="@+id/prev_Po_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/prev_month_start_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="По "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/prev_month_stop_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/prev_month_start_tv"
+            app:layout_constraintLeft_toRightOf="@id/prev_Po_tv"
+            android:textSize="30sp"
+            android:text="24.05.2008"
+            />
+        <Button
+            android:id="@+id/prev_month_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/prev_month_start_tv"
+            app:layout_constraintLeft_toRightOf="@id/prev_month_start_tv"
+            app:layout_constraintBottom_toBottomOf="@id/prev_month_stop_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="20sp"
+            android:text="Узнать\n больше" />
+        <TextView
+            android:id="@+id/prev_month_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/prev_month_sun_numb"
+            app:layout_constraintBottom_toBottomOf="@id/prev_month_sun_numb"
+            android:text="Cумма: "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/prev_month_sun_numb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/prev_month_sum"
+            app:layout_constraintTop_toBottomOf="@id/prev_month_stop_tv"
+            android:textSize="40sp"
+            android:text="5000"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Last_month_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/prev_month_layout"
+        android:padding="10dp"
+
+        >
+        <TextView
+            android:id="@+id/Last_moth_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Траты за 30 дней"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/Last_s_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/Last_moth_info"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="С "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/Last_month_start_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/Last_month_stop_tv"
+            app:layout_constraintTop_toBottomOf="@id/Last_moth_info"
+            android:textSize="30sp"
+            android:text="24.05.2007"
+            />
+        <TextView
+            android:id="@+id/Last_Po_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/Last_month_start_tv"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="По "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/Last_month_stop_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/Last_month_start_tv"
+            app:layout_constraintLeft_toRightOf="@id/Last_Po_tv"
+            android:textSize="30sp"
+            android:text="24.05.2008"
+            />
+        <Button
+            android:id="@+id/last_month_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/Last_month_start_tv"
+            app:layout_constraintLeft_toRightOf="@id/Last_month_start_tv"
+            app:layout_constraintBottom_toBottomOf="@id/Last_month_stop_tv"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="20sp"
+            android:text="Узнать\n больше" />
+        <TextView
+            android:id="@+id/Last_month_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/Last_month_sun_numb"
+            app:layout_constraintBottom_toBottomOf="@id/Last_month_sun_numb"
+            android:text="Cумма: "
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/Last_month_sun_numb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/Last_month_sum"
+            app:layout_constraintTop_toBottomOf="@id/Last_month_stop_tv"
+            android:textSize="40sp"
+            android:text="5000"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/add_waste_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить Трату"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Last_month_layout"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:layout_margin="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
